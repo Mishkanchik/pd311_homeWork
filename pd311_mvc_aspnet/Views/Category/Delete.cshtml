@@ -1,0 +1,17 @@
+﻿@model Category
+
+<div style="width: 40%; margin: 0 auto; border: 2px solid black; padding: 10px; border-radius: 10px;">
+    <h1 style="text-align: center">Видалення категорії</h1>
+    <form asp-action="Delete" method="post" style="margin: 15px 0">
+        <div class="mb-3 row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Name" disabled>
+            </div>
+        </div>
+        <div style="margin: 15px 0; display: flex; padding: 5px;">
+            <input style="flex-grow: 1; margin: 5px;" type="submit" class="btn btn-success" value="Видалити" />
+            <a style="flex-grow: 1; margin: 5px;" class="btn btn-dark" asp-action="Index">Повернутися</a>
+        </div>
+    </form>
+</div>

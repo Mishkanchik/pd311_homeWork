@@ -1,0 +1,36 @@
+﻿@model Product
+
+<div style="width: 40%; margin: 0 auto; border: 2px solid black; padding: 10px; border-radius: 10px;">
+    <h1 style="text-align: center">Створення товару</h1>
+    <form asp-action="delete" method="post" style="margin: 15px 0">
+        <input type="text" asp-for="Image" hidden />
+        <div class="mb-3 row">
+            <label for="name" class="col-sm-2 col-form-label">Назва</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Name" disabled>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="description" class="col-sm-2 col-form-label">Опис</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Description" disabled>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="price" class="col-sm-2 col-form-label">Ціна</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for="Price" disabled>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="amount" class="col-sm-2 col-form-label">Кількість</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for="Amount" disabled>
+            </div>
+        </div>
+        <div style="margin: 15px 0; display: flex; padding: 5px;">
+            <input style="flex-grow: 1; margin: 5px;" type="submit" class="btn btn-success" value="Видалити" />
+            <a style="flex-grow: 1; margin: 5px;" class="btn btn-dark" asp-action="Index">Повернутися</a>
+        </div>
+    </form>
+</div>
